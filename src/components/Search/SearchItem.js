@@ -9,7 +9,7 @@ function SearchItem({  title, description, url, urlToImage, source }) {
             </div>
             <div className="search-card-content">
                 <div className="search-card-title">
-                    <h3><a href={url} target="_blank">{title}</a></h3>
+                    <h3><a href={url}>{title}</a></h3>
                 </div>
                 <p>{description}</p>
                 <h4>-{source}</h4>
