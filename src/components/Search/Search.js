@@ -8,7 +8,9 @@ function Search() {
 
     async function searchNews(e) {
        
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${e}&pageSize=9&sortBy=popularity&apiKey=17d9ab7490e5435ea9a1807760eac906`)
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${e}&pageSize=9&sortBy=popularity&apiKey=17d9ab7490e5435ea9a1807760eac906`,{
+            headers : {"Access-Control-Allow-Origin": "*"}
+        })
         if (response) {
             setSearchNews(response.data.articles)
         }
